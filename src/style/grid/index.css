@@ -1,0 +1,22 @@
+body {
+    display: grid;
+
+    /*Define as áreas para posicionar os elementos*/
+    grid-template-areas: 
+    "aside header"
+    "aside main";
+    grid-template-columns: 
+    auto 1fr; 
+}
+
+.cabecalho {
+    grid-area: header;
+}
+
+.menu-lateral {
+    grid-area: aside;
+}
+
+.principal {
+    grid-area: main;
+}
