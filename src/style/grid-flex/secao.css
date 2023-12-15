@@ -20,3 +20,26 @@
     Essa abordagem permite que os cartões se ajustem de forma responsiva em diferentes tamanhos de tela, garantindo uma boa experiência para os usuários. */
     gap: 1.25rem;
 }
+
+.secao-vertical {
+    grid-template-columns: 1fr auto;
+}
+
+.secao-vertical .secao__cartoes {
+    display: grid;
+    grid-auto-flow: column; /*ELEMENTOS FICARAO AUTOMATICAMENTE ORGANIZADOS UM AO LADO DO OUTRO EM COLUNAS*/
+    overflow-x: scroll;
+    overflow-y: hidden;
+    grid-column: 1 / 3;  /*COLUNA INICIAL / COLUNA FINAL*/
+    column-gap: 1.25rem;
+}
+
+.secao-vertical .secao__cartoes .cartao a{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.secao-vertical .secao__cartoes .cartao__titulo {
+    flex-grow: 1;
+}
