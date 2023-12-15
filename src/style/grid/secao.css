@@ -8,3 +8,15 @@
     grid-template-rows: 70px auto;
 }
 
+.secao-horizontal .secao__cartoes {
+    display: grid;    
+    grid-template-columns: repeat(auto-fit, minmax(min(80%/2, max(350px, 80%/3)), 1fr));
+    /* No trecho repeat(auto-fit, minmax(min(80%/2, max(350px, 80%/3)), 1fr)), estamos utilizando a função repeat para criar um número de colunas automáticas que se ajustam de acordo com a largura disponível.
+
+    O auto-fit faz com que as colunas se ajustem automaticamente, enquanto o minmax define a largura mínima e máxima dos cartões. No caso, estamos definindo que a largura mínima será de 80% dividido por 2 (40% do container) e a largura máxima será de 350px.
+
+    Além disso, estamos utilizando 80%/3 para definir que os elementos sejam divididos em 3 colunas e 1fr para que utilizem toda a largura disponível do layout.
+
+    Essa abordagem permite que os cartões se ajustem de forma responsiva em diferentes tamanhos de tela, garantindo uma boa experiência para os usuários. */
+    gap: 1.25rem;
+}
